@@ -1,0 +1,14 @@
+[Unit]
+Description=Final git push on shutdown
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/khlongwa/scripts/gitpush.sh
+TimeoutStartSec=60
+RemainAfterExit=yes
+User=khlongwa
+
+[Install]
+WantedBy=halt.target reboot.target shutdown.target

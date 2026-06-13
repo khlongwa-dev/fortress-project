@@ -1,0 +1,5 @@
+# This was done so that Ubuntu Server VM is able to find Windows Server VM and host machine by name, it is a low level of nslookup or dns resolve
+
+192.168.56.102 windows-server
+192.168.56.1 ubuntu-host
+
